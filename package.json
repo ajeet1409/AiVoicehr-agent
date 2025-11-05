@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon Backend/server.js",
-    "build":"npm install && npm install --prefix AiVoiceHr-agent && npm run build --prefix AiVoiceHr-agent",
+    "build":"npm install && npm install --prefix AiVoiceHragent && npm run build --prefix AiVoiceHragent",
     "start":"node Backend/server.js"
   },
   "keywords": [],

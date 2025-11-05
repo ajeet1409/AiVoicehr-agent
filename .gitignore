@@ -1,3 +1,19 @@
-
+# Environment variables
 .env
+
+# Dependencies
 node_modules
+Backend/node_modules
+AiVoiceHragent/node_modules
+
+# Build output
+AiVoiceHragent/dist
+dist
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS files
+.DS_Store
+Thumbs.db
