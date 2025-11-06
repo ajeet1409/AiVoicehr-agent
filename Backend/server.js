@@ -65,13 +65,13 @@ app.use(express.static(path.join(dirname, '/AiVoiceHragent/dist')));
 
 // Catch-all route - serve React app for any non-API routes
 // This must be AFTER all API routes
-app.use((req, res )=> {
+app.use((req, res,next )=> {
     // Only serve index.html for non-API routes
-    // if (!req.path.startsWith('/api')) {
+    if (!req.path.startsWith('/api')) {
         res.sendFile(path.resolve(dirname, 'AiVoiceHragent', 'dist', 'index.html'));
-    // } else {
-    //     next();
-    // }
+    } else {
+        next();
+    }
 });
 
 // app.get('*', (req, res) => {
