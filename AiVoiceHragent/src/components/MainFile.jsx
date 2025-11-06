@@ -69,8 +69,24 @@ export default function VapiVoiceCaller() {
   const API_TOKEN = 'wu2rq5auZwgIuyJdr9KKfITCMyr9XFXGsuq7oDBIZVo';
   const AGENT_ID = 51650; // Replace with your numeric agent ID from OmniDim dashboard
   const FROM_NUMBER_ID = 400; // Replace with your from_number_id from phone number API
-  // Use environment variable for backend URL, fallback to localhost for development
-  const BACKEND_URL = `${import.meta.env.VITE_BACKEND_URL || 'http://localhost:3000'}/api/omnidim`;
+
+  // Use environment variable for backend URL
+  // In production (when served from same server), use relative URL
+  // In development, use localhost:3000
+  const getBackendUrl = () => {
+    // If VITE_BACKEND_URL is set, use it
+    if (import.meta.env.VITE_BACKEND_URL) {
+      return `${import.meta.env.VITE_BACKEND_URL}/api/omnidim`;
+    }
+    // If in production (same origin), use relative URL
+    if (window.location.hostname !== 'localhost') {
+      return '/api/omnidim';
+    }
+    // Default to localhost for development
+    return 'http://localhost:3000/api/omnidim';
+  };
+
+  const BACKEND_URL = getBackendUrl();
 
   // ============================================
   // EFFECTS
