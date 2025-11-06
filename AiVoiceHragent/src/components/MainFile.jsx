@@ -386,7 +386,7 @@ export default function VapiVoiceCaller() {
         <div style={{...styles.header, display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '1rem'}}>
           <div>
             <h1 style={styles.title}>AI HR Calling Agent</h1>
-            <p style={styles.subtitle}>Powered by Vapi AI Voice Technology</p>
+            <p style={styles.subtitle}>Powered by Ruvanta Technology</p>
           </div>
           <UserProfileDropdown />
         </div>
