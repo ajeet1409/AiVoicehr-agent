@@ -68,7 +68,7 @@ export default function VapiVoiceCaller() {
 
   const API_TOKEN = 'wu2rq5auZwgIuyJdr9KKfITCMyr9XFXGsuq7oDBIZVo';
   const AGENT_ID = 51650; // Replace with your numeric agent ID from OmniDim dashboard
-  const FROM_NUMBER_ID = 400; // Replace with your from_number_id from phone number API
+  const FROM_NUMBER_ID = 1090; // Replace with your from_number_id from phone number API
 
   // Use environment variable for backend URL
   // In production (when served from same server), use relative URL

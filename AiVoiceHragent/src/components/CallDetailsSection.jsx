@@ -347,7 +347,7 @@ const CallDetailsSection = ({ call, onBack, styles }) => {
       </div>
 
       {/* Transcript Section */}
-      {/* {transcript && (
+      {transcript && (
         <div style={styles.transcriptSection}>
           <div style={styles.jsonHeader}>
             <FileText size={20} />
@@ -367,7 +367,7 @@ const CallDetailsSection = ({ call, onBack, styles }) => {
             }}
           />
         </div>
-      )} */}
+      )}
 
       {/* Debug Section - Show all available fields */}
       {/* {!transcript && !recordingUrl && (
